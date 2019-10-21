@@ -1,4 +1,4 @@
-package br.com.meuprimeiroprojeto.repositorios;
+package com.marcelphilippe.pontointeligente.api.repositorios;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;

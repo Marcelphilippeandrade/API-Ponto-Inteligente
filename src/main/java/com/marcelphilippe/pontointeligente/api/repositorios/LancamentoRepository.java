@@ -1,4 +1,4 @@
-package br.com.meuprimeiroprojeto.repositorios;
+package com.marcelphilippe.pontointeligente.api.repositorios;
 
 import java.util.List;
 
