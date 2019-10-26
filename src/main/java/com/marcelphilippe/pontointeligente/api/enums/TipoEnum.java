@@ -1,4 +1,4 @@
-package com.marcelphilippe.pontointeligente.enums;
+package com.marcelphilippe.pontointeligente.api.enums;
 
 public enum TipoEnum {
 	INICIO_TRABALHO,

@@ -1,4 +1,4 @@
-package com.marcelphilippe.pontointeligente.enums;
+package com.marcelphilippe.pontointeligente.api.enums;
 
 public enum PerfilEnum {
 	ROLE_ADMIN,

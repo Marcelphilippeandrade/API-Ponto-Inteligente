@@ -1,4 +1,4 @@
-package com.marcelphilippe.pontointeligente.entidades;
+package com.marcelphilippe.pontointeligente.api.entidades;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -18,7 +18,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import com.marcelphilippe.pontointeligente.enums.TipoEnum;
+import com.marcelphilippe.pontointeligente.api.enums.TipoEnum;
 
 @Entity
 @Table(name = "lancamento")

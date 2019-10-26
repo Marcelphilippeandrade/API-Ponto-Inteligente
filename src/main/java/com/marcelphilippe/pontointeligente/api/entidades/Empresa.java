@@ -1,4 +1,4 @@
-package com.marcelphilippe.pontointeligente.entidades;
+package com.marcelphilippe.pontointeligente.api.entidades;
 
 import java.io.Serializable;
 import java.util.Date;
