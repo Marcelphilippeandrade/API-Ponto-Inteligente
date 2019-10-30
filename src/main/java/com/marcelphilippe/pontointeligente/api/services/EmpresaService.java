@@ -6,7 +6,7 @@ import com.marcelphilippe.pontointeligente.api.entidades.Empresa;
 
 public interface EmpresaService {
 	
-	/**Retorna uma empresa dodo um Cnpj
+	/**Retorna uma empresa dado um Cnpj
 	* 
 	*@param cnpj 
 	*@return Optional<Empresa>
