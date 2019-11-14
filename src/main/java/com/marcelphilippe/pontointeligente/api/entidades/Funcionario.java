@@ -34,7 +34,7 @@ public class Funcionario implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	@Column(name = "name", nullable = false)
+	@Column(name = "nome", nullable = false)
 	private String nome;
 	
 	@Column(name = "email", nullable = false)
