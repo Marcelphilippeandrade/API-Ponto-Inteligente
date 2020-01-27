@@ -50,12 +50,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	public AuthenticationManager authenticationManagerBean() throws Exception {
 	   return super.authenticationManagerBean();
 	}
-	
-	@Bean
-	public UserDetailsService userDetailsService() {
-	    return super.userDetailsService();
-	}
-	
+		
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
 		httpSecurity.csrf().disable().exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
