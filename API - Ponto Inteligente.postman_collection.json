@@ -1,0 +1,379 @@
+{
+	"info": {
+		"_postman_id": "1ecabc4b-3ffa-49dd-8881-16ca0c8c5765",
+		"name": "API - Ponto Inteligente",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastro Pessoa Jurídica",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/cadastrar-pj",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"Teste Teste\",\n\t\"email\": \"Teste@hotmail.com\",\n\t\"senha\": \"123456\",\n\t\"cpf\" : \"06694249004\",\n\t\"razaoSocial\" : \"Teste\",\n\t\"cnpj\" : \"40965563000139\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cadastrar-pj",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cadastrar-pj"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Cadastrar Pessoa Física",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/cadastrar-pf",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"Neusa Abreu Andrade\",\n\t\"email\" : \"neusaabreuandrade@gmail.com\",\n\t\"senha\" : \"123456\",\n\t\"cpf\" : \"766.006.540-82\",\n\t\"valorHora\" : \"100\",\n\t\"cnpj\" : \"24547649000195\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cadastrar-pf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cadastrar-pf"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Alterar Funcionario",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/funcionarios/3",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Josiane da Silva Rosa\",\n\t\"valorHora\": \"200\",\n\t\"qtdHorasTrabalhoDia\": \"8.0\",\n\t\"email\": \"jorosa@gmail.com\",\n\t\"senha\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/funcionarios/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"funcionarios",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Cadastrar Lancamento",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/lancamentos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb3Jvc2FAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNVQVJJTyIsImNyZWF0ZWQiOjE1ODAxNjczMjUzOTQsImV4cCI6MTU4MDc3MjEyNX0.Zr0-DqtHxHGNMz9F9TecwYLyfdGQPS0VInwgQdzvd2mZjqjcMOg57MuDGdBQaLkYkqX8W_I0pO7T1OTY5wTzRg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\": \"2020-01-27 18:00:00\",\n\t\"tipo\": \"TERMINO_TRABALHO\",\n\t\"descricao\": \"Fim de trabalho\",\n\t\"localizacao\": \"19.864949,43.93413150000001\",\n\t\"funcionarioId\": \"3\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/lancamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"lancamentos"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Deletar Lancamento",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/lancamentos/13",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxwYWFAaG90bWFpbC5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE1ODAxNjg4MzE3NDUsImV4cCI6MTU4MDc3MzYzMX0.Uae-oHER8R2SbnVIOUPmWrxYyfdd_Sq8qcMqm9d-CtE7FWZ_DMPVZRAVYOr4iiPUvnmU4_hmu60FTrKARgDRJw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/lancamentos/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"lancamentos",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Consultar Lancamento",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/lancamentos/13",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb3Jvc2FAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNVQVJJTyIsImNyZWF0ZWQiOjE1ODAxNjczMjUzOTQsImV4cCI6MTU4MDc3MjEyNX0.Zr0-DqtHxHGNMz9F9TecwYLyfdGQPS0VInwgQdzvd2mZjqjcMOg57MuDGdBQaLkYkqX8W_I0pO7T1OTY5wTzRg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/lancamentos/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"lancamentos",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Autenticar Usuário",
+			"item": [
+				{
+					"name": "http://localhost:8080/auth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"marcelpaa@hotmail.com\",\n\t\"senha\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Teste Heroku",
+			"item": [
+				{
+					"name": "Testa Envio de Requisição no Hiroku",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxwYWFAaG90bWFpbC5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE1ODE1NDk2Nzk0MTQsImV4cCI6MTU4MjE1NDQ3OX0.BD_fK0krcEaKYRS2dlQ8z6BLqjm1E13cr3nu4Kw6upLxC25pqnjWkXdOKRU6eFNX-JgtABCzhxYxlHSZ3FiS4g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://obscure-crag-79193.herokuapp.com/api/empresas/cnpj/83815138000176",
+							"protocol": "https",
+							"host": [
+								"obscure-crag-79193",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"empresas",
+								"cnpj",
+								"83815138000176"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Gera Token de Autenticação no Hiroku",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"marcelpaa@hotmail.com\",\n\t\"senha\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "https://obscure-crag-79193.herokuapp.com/auth",
+							"protocol": "https",
+							"host": [
+								"obscure-crag-79193",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
