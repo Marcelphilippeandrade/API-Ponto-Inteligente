@@ -17,4 +17,4 @@ de uma empresa.
 * Travis CI;
 * Heroku 
 
-: blush : É isso ai : smiley :
+:blush: É isso ai :smiley:
