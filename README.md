@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Marcelphilippeandrade/ponto-inteligente-api.svg?branch=master)](https://travis-ci.org/Marcelphilippeandrade/ponto-inteligente-api)
+[![Build Status](https://travis-ci.org/Marcelphilippeandrade/API-Ponto-Inteligente.svg?branch=master)](https://travis-ci.org/Marcelphilippeandrade/ponto-inteligente-api)
 
 # Ponto Inteligente
 API do sistema de ponto inteligente com Java e Spring Boot. Está API foi desenvolvida utilizando a linguagem Java versão 8 e o framework Spring Boot.
